@@ -131,7 +131,7 @@ namespace ex14:
 end
 
 @external
-func validate_various_exercices{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(
+func validate_various_exercises{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(
     ):
     # This call should collect at least 20 points from various exercises to get tokens to the contract.
     let (currentContractAddress) = get_contract_address()
