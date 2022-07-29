@@ -1,0 +1,13 @@
+{
+    "name": "cairo101-solution",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "devDependencies": {
+        "@shardlabs/starknet-hardhat-plugin": "^0.5.5",
+        "hardhat": "^2.9.9"
+    },
+    "dependencies": {
+        "dotenv": "^16.0.1"
+    }
+}
