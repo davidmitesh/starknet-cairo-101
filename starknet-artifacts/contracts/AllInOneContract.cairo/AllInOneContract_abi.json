@@ -10,5 +10,20 @@
         "name": "call_ex_14_contract",
         "outputs": [],
         "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "address_to_transfer",
+                "type": "felt"
+            },
+            {
+                "name": "erc_20_token_address",
+                "type": "felt"
+            }
+        ],
+        "name": "transfer_contract_balance_to_wallet",
+        "outputs": [],
+        "type": "function"
     }
 ]

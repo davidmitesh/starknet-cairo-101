@@ -136,16 +136,16 @@ func validate_various_exercises{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*
     # This call should collect at least 20 points from various exercises to get tokens to the contract.
     let (currentContractAddress) = get_contract_address()
     # Now solving exercise 1
-    let exercise_1_contract_address = 1591509280391971671979263777446171019412522583809867665188727628997529900662
+    let exercise_1_contract_address = 0x29e2801df18d7333da856467c79aa3eb305724db57f386e3456f85d66cbd58b
     ex01.claim_points(contract_address=exercise_1_contract_address)
 
     # Now solving exercise 2
-    let exercise_2_contract_address = 1067517588230639979884133346766193897095551944895293625855280238365728443292
+    let exercise_2_contract_address = 0x18ef3fa8b5938a0059fa35ee6a04e314281a3e64724fe094c80e3720931f83f
     let (ex02_secret_value) = ex02.my_secret_value(contract_address=exercise_2_contract_address)
     ex02.claim_points(contract_address=exercise_2_contract_address, my_value=ex02_secret_value)
 
     # Now solving exercise 3
-    let exercise_3_contract_address = 1086432947465216110691557072517050993057749394602776175826262695484039541684
+    let exercise_3_contract_address = 0x79275e734d50d7122ef37bb939220a44d0b1ad5d8e92be9cdb043d85ec85e24
     ex03.reset_counter(contract_address=exercise_3_contract_address)
     ex03.increment_counter(contract_address=exercise_3_contract_address)  # each increment counter adds 2 points
     ex03.increment_counter(contract_address=exercise_3_contract_address)
@@ -155,7 +155,7 @@ func validate_various_exercises{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*
     ex03.claim_points(contract_address=exercise_3_contract_address)
 
     # Now solving exercise 4
-    let exercise_4_contract_address = 3387262466780441900417273633747175144517715037121646293535032175584868800957
+    let exercise_4_contract_address = 0x2cca27cae57e70721d0869327cee5cb58098af4c74c7d046ce69485cd061df1
     ex04.assign_user_slot(contract_address=exercise_4_contract_address)
     let (user_slot) = ex04.user_slots(
         contract_address=exercise_4_contract_address, account=currentContractAddress
@@ -164,7 +164,7 @@ func validate_various_exercises{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*
     ex04.claim_points(contract_address=exercise_4_contract_address, expected_value=value - 32)
 
     # Now solving exercise 5
-    let exercise_5_contract_address = 1762046160852852348940801088815614098417952288856208564245207920905000448998
+    let exercise_5_contract_address = 0x399a3fdd57cad7ed2193bdbb00d84553cd449abbdfb62ccd4119eae96f827ad
     ex05.assign_user_slot(contract_address=exercise_5_contract_address)
     ex05.copy_secret_value_to_readable_mapping(contract_address=exercise_5_contract_address)
     let (user_value) = ex05.user_values(
@@ -173,7 +173,7 @@ func validate_various_exercises{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*
     ex05.claim_points(contract_address=exercise_5_contract_address, expected_value=user_value)
 
     # Now solving exercise 6
-    let exercise_6_contract_address = 20060496102257455600952910040875378345224184951565231801940795314124484036
+    let exercise_6_contract_address = 0x718ece7af4fb1d9c82f78b7a356910d8c2a8d47d4ac357db27e2c34c2424582
     ex06.assign_user_slot(contract_address=exercise_6_contract_address)
     ex06.external_handler_for_internal_function(
         contract_address=exercise_6_contract_address, a_value=0
@@ -184,12 +184,12 @@ func validate_various_exercises{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*
     ex06.claim_points(contract_address=exercise_6_contract_address, expected_value=user_value)
 
     # Now solving exercise 7
-    let exercise_7_contract_address = 230389261848598402870989060543424359496095982338256312561780370558236733440
+    let exercise_7_contract_address = 0x3a1ad1cde69c9e7b87d70d2ea910522640063ccfb4875c3e33665f6f41d354a
     ex07.claim_points(contract_address=exercise_7_contract_address, value_a=50, value_b=0)
 
     # Now solving exercise 8
 
-    let exercise_8_contract_address = 1248172035032622887861381778063216478160411922890533069353323963749694576431
+    let exercise_8_contract_address = 0x15fa754c386aed6f0472674559b75358cde49db8b2aba8da31697c62001146c
     let (numbers_array : felt*) = alloc()
     assert [numbers_array] = 10
     assert [numbers_array + 1] = 10
@@ -213,7 +213,7 @@ func validate_various_exercises{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*
 
     # Now solving exercise 9
 
-    let exercise_9_contract_address = 357440137401702541001161216925035617424867493600456948346632631645015912369
+    let exercise_9_contract_address = 0x2b9fcc1cfcb1ddf4663c8e7ac48fc87f84c91a8c2b99414c646900bf7ef5549
     let (numbers_array : felt*) = alloc()
     assert [numbers_array] = 220
     assert [numbers_array + 1] = 73
@@ -225,7 +225,7 @@ func validate_various_exercises{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*
     )
 
     # Now solving exercise 10
-    let exercise_10_contract_address = 704471897108014414393459224136267066228147055654991659861659135062124782477
+    let exercise_10_contract_address = 0x8415762f4b0b0f44e42ac1d103ac93c3ea94450a15bb65b99bbcc816a9388
     let (exercise_10b_address) = ex10.ex10b_address(contract_address=exercise_10_contract_address)
     let (secret_value) = Iex10b.secret_value(contract_address=exercise_10b_address)
     ex10.claim_points(
@@ -239,7 +239,7 @@ end
 
 @external
 func call_ex_14_contract{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}():
-    let address = 1979510590566356355949737127225466958756749883817120849503018481540560420447
+    let address = 0xed7ddffe1370fbbc1974ab8122d1d9bd7e3da8d829ead9177ea4249b4caef1
     ex14.claim_points(contract_address=address)
     return ()
 end
